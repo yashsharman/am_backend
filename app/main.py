@@ -73,6 +73,7 @@ async def seed_first_admin():
 # ──────────────────────────────────────────────
 # Health check
 # ──────────────────────────────────────────────
+@app.get("/", tags=["health"])
 @app.get("/health", tags=["health"])
 async def health_check():
     return {"status": "ok", "service": "aftermiles-admin-api"}
