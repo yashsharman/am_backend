@@ -14,7 +14,14 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int = 30
     FIRST_ADMIN_EMAIL: str = "admin@aftermiles.com"
     FIRST_ADMIN_PASSWORD: str = "admin123"
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+    CORS_ORIGINS: List[str] = [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
+        "http://localhost:3000",
+        "http://localhost:4173",
+    ]
 
     @property
     def mongo_url(self) -> str:
